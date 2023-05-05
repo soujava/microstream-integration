@@ -1,2 +1,11 @@
-package org.jnosql.demo.se;public class Library {
+package org.jnosql.demo.se;
+
+import jakarta.data.repository.CrudRepository;
+import jakarta.data.repository.Repository;
+
+import java.util.List;
+
+@Repository
+public interface Library extends CrudRepository<Book, String> {
+    List<Book> findByTitle(String title);
 }
