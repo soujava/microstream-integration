@@ -1,2 +1,8 @@
-= Microstream integration sample
-On this repository, we'll concentrate microstream integration cases
+= Microstream integration examples
+:toc: auto
+
+== Introduction
+
+This project aims to develop a Microstream integration system that can work seamlessly with multiple databases. The Microstream technology is a high-performance in-memory data management system that provides an efficient way of storing and accessing data. The system is designed to work with various data structures, from simple key-value pairs to complex graphs.
+
+In this project, we will explore various integration techniques that can be used to connect Microstream with different databases, such as MySQL, MongoDB, Oracle, and PostgreSQL.
