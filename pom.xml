@@ -31,7 +31,7 @@
         <mockito.verson>4.11.0</mockito.verson>
         <assertj.version>3.24.2</assertj.version>
         <junit.version>5.9.2</junit.version>
-        <microstream.data.version>0.0.2-SNAPSHOT</microstream.data.version>
+        <microstream.data.version>0.0.2</microstream.data.version>
         <microstream.version>08.00.00-MS-GA</microstream.version>
     </properties>
 
