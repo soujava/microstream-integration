@@ -27,7 +27,7 @@ public class App {
             Book book2 = new Book("1234", "Effective Java", 2019);
             Book book3 = new Book("1235", "Effective Java", 2022);
             Library library = container.select(Library.class).get();
-            //library.saveAll(List.of(book, book2, book3));
+            library.saveAll(List.of(book, book2, book3));
             List<Book> books = library.findByTitle(book.getTitle());
             System.out.println("The books: " + books);
             System.out.println("The size: " + books.size());
