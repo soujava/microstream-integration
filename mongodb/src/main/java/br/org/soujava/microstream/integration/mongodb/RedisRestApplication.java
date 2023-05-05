@@ -6,6 +6,6 @@ import jakarta.ws.rs.core.Application;
 /**
  *
  */
-@ApplicationPath("/data")
+@ApplicationPath("/")
 public class MongodbRestApplication extends Application {
 }
