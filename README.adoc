@@ -6,3 +6,27 @@
 This project aims to develop a Microstream integration system that can work seamlessly with multiple databases. The Microstream technology is a high-performance in-memory data management system that provides an efficient way of storing and accessing data. The system is designed to work with various data structures, from simple key-value pairs to complex graphs.
 
 In this project, we will explore various integration techniques that can be used to connect Microstream with different databases, such as MySQL, MongoDB, Oracle, and PostgreSQL.
+
+
+=== Redis
+
+image::https://www.jnosql.org/img/logos/redis.png[Redis, width=200px]
+
+Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices.
+
+==== How to install with Docker
+
+image::https://d1q6f0aelx0por.cloudfront.net/product-logos/library-docker-logo.png[]
+
+1. Install docker: https://www.docker.com/
+1. https://hub.docker.com/r/couchbase/server/
+1. Run docker command:
+
+[source, bash]
+----
+docker run --name redis-instance -p 6379:6379 -d redis
+----
+
+==== Projects
+
+* link:redis/[Redis sample]
