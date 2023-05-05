@@ -1,2 +1,2 @@
-# microstream-integration
+= Microstream integration sample
 On this repository, we'll concentrate microstream integration cases
