@@ -4,7 +4,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.org.soujava.microstream.integration</groupId>
-    <artifactId>mongodb</artifactId>
+    <artifactId>redis</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <properties>
@@ -16,7 +16,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <final.name>mongodb</final.name>
         <slf4j.api.version>1.7.30</slf4j.api.version>
-        <microstream.data.version>0.0.1</microstream.data.version>
+        <microstream.data.version>0.0.2-SNAPSHOT</microstream.data.version>
+        <microstream.version>08.00.00-MS-GA</microstream.version>
     </properties>
     <dependencies>
         <dependency>
@@ -30,6 +31,11 @@
             <groupId>expert.os.integration</groupId>
             <artifactId>microstream-jakarta-data</artifactId>
             <version>${microstream.data.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>one.microstream</groupId>
+            <artifactId>microstream-afs-redis</artifactId>
+            <version>${microstream.version}</version>
         </dependency>
     </dependencies>
     <build>
