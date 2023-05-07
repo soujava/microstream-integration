@@ -12,7 +12,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>redis</artifactId>
+    <artifactId>postgresql</artifactId>
     <name>JNoSQL Demo using Java SE Postgresql</name>
     <parent>
         <groupId>br.org.soujava</groupId>
@@ -27,8 +27,13 @@
         </dependency>
         <dependency>
             <groupId>one.microstream</groupId>
-            <artifactId>microstream-afs-redis</artifactId>
+            <artifactId>microstream-afs-sql</artifactId>
             <version>${microstream.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.14</version>
         </dependency>
     </dependencies>
 </project>
