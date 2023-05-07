@@ -37,6 +37,7 @@
 
     <modules>
         <module>redis</module>
+        <module>postgresql</module>
     </modules>
 
 
