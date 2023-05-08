@@ -56,4 +56,4 @@ docker run --rm=true --name postgres-instance -e POSTGRES_USER=micronaut \
 
 ==== Projects
 
-* link:redis/[Redis sample]
+* link:postgresql/[Postgresql sample]
