@@ -16,7 +16,6 @@ import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 public class App {
 
