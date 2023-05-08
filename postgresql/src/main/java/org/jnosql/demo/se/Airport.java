@@ -6,6 +6,6 @@ import jakarta.data.repository.Repository;
 import java.util.List;
 
 @Repository
-public interface Library extends CrudRepository<Book, String> {
-    List<Book> findByTitle(String title);
+public interface Airport extends CrudRepository<Airplane, String> {
+    List<Airplane> findByTitle(String title);
 }

@@ -16,7 +16,7 @@ Redis is an in-memory data structure store, used as a distributed, in-memory key
 
 ==== How to install with Docker
 
-image::https://d1q6f0aelx0por.cloudfront.net/product-logos/library-docker-logo.png[]
+image::https://d1q6f0aelx0por.cloudfront.net/product-logos/airport-docker-logo.png[]
 
 1. Install docker: https://www.docker.com/
 1. https://hub.docker.com/r/couchbase/server/
@@ -41,7 +41,7 @@ PostgreSQL, also known as Postgres, is a free and open-source relational databas
 
 ==== How to install with Docker
 
-image::https://d1q6f0aelx0por.cloudfront.net/product-logos/library-docker-logo.png[]
+image::https://d1q6f0aelx0por.cloudfront.net/product-logos/airport-docker-logo.png[]
 
 1. Install docker: https://www.docker.com/
 1. https://hub.docker.com/r/couchbase/server/

@@ -1,7 +1,6 @@
 package org.jnosql.demo.se;
 
 
-import jakarta.json.bind.annotation.JsonbCreator;
 import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
@@ -9,7 +8,7 @@ import jakarta.nosql.Id;
 import java.util.Objects;
 
 @Entity
-public class Book {
+public class Airplane {
     @Id
     private String isbn;
     @Column("title")
@@ -17,9 +16,9 @@ public class Book {
     @Column("year")
     private int year;
 
-    public Book(String isbn,
-                String title,
-                int year) {
+    public Airplane(String isbn,
+                    String title,
+                    int year) {
         this.isbn = isbn;
         this.title = title;
         this.year = year;
@@ -46,8 +45,8 @@ public class Book {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Book book = (Book) o;
-        return Objects.equals(isbn, book.isbn);
+        Airplane airplane = (Airplane) o;
+        return Objects.equals(isbn, airplane.isbn);
     }
 
     @Override
