@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 @ApplicationScoped
 class DataSourceSupplier implements Supplier<DataSource> {
 
-    private static final String JDBC = "microstream.postgresql.jdbc=jdbc:postgresql";
+    private static final String JDBC = "microstream.postgresql.jdbc";
     private static final String USER = "microstream.postgresql.user";
     private static final String PASSWORD = "microstream.postgresql.password";
 
