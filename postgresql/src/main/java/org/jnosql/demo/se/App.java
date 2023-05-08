@@ -16,8 +16,7 @@ import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
 
 import java.util.List;
-
-import static org.jnosql.demo.se.Airplane.builder;
+import java.util.stream.Stream;
 
 public class App {
 
@@ -31,10 +30,12 @@ public class App {
             Airplane airplane4 = Airplane.id("4").model("E-175").year(2023).manufacturer("Embraer");
             Airplane airplane5 = Airplane.id("5").model("A319").year(1995).manufacturer("Airbus");
             Airport airport = container.select(Airport.class).get();
-            airport.saveAll(List.of(airplane, airplane2, airplane3, airplane5, airplane5));
-            List<Airplane> boings = airport.findByModel(airplane.getModel());
+            airport.saveAll(List.of(airplane, airplane2, airplane3, airplane4, airplane5));
+            var boings = airport.findByModel(airplane.getModel());
+            var all = airport.findAll().toList();
             System.out.println("The boings: " + boings);
             System.out.println("The boing models avialables: " + boings.size());
+            System.out.println("The airport total: " + all.size());
         }
         System.exit(0);
     }
