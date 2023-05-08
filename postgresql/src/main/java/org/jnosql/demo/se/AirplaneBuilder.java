@@ -28,9 +28,9 @@ public class AirplaneBuilder {
         return this;
     }
 
-    public AirplaneBuilder manufacturer(String manufacturer) {
+    public Airplane manufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
-        return this;
+        return build();
     }
 
     public Airplane build() {
