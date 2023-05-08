@@ -5,6 +5,7 @@ import jakarta.nosql.Column;
 import jakarta.nosql.Entity;
 import jakarta.nosql.Id;
 
+import java.time.Year;
 import java.util.Objects;
 
 @Entity
@@ -14,14 +15,18 @@ public class Airplane {
     @Column("title")
     private String model;
     @Column("year")
-    private int year;
+    private Year year;
 
-    public Airplane(String id,
+    @Column
+    private String manufacturer;
+
+    Airplane(String id,
                     String model,
-                    int year) {
+                    Year year, String manufacturer) {
         this.id = id;
         this.model = model;
         this.year = year;
+        this.manufacturer = manufacturer;
     }
 
 
@@ -33,8 +38,12 @@ public class Airplane {
         return model;
     }
 
-    public int getYear() {
+    public Year getYear() {
         return year;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
     }
 
     @Override
@@ -61,5 +70,9 @@ public class Airplane {
                 ", title='" + model + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    public static AirplaneBuilder id(String id) {
+        return new AirplaneBuilder().id(id);
     }
 }

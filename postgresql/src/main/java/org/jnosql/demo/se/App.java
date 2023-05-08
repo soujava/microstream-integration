@@ -17,20 +17,22 @@ import jakarta.enterprise.inject.se.SeContainerInitializer;
 
 import java.util.List;
 
+import static org.jnosql.demo.se.Airplane.builder;
+
 public class App {
 
 
     public static void main(String[] args) {
 
         try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            Airplane airplane = new Airplane("1", "boeing 777", 1994);
-            Airplane airplane2 = new Airplane("2", "E-175", 2023);
-            Airplane airplane3 = new Airplane("3", "Airbus A319", 1995);
+            Airplane airplane = Airplane.id("1").model("boeing 777").year(1994).build();
+            Airplane airplane2 = Airplane.id("2").model("E-175").year(2023).build();
+            Airplane airplane3 = Airplane.id("3").model("Airbus A319").year(1995).build();
             Airport airport = container.select(Airport.class).get();
             airport.saveAll(List.of(airplane, airplane2, airplane3));
-            List<Airplane> airplanes = airport.findByModel(airplane.getModel());
-            System.out.println("The books: " + airplanes);
-            System.out.println("The size: " + airplanes.size());
+            List<Airplane> boings = airport.findByModel(airplane.getModel());
+            System.out.println("The boings: " + boings);
+            System.out.println("The boing models avialables: " + boings.size());
         }
         System.exit(0);
     }
