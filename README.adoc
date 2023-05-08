@@ -50,7 +50,7 @@ image::https://d1q6f0aelx0por.cloudfront.net/product-logos/airport-docker-logo.p
 [source, bash]
 ----
 docker run --rm=true --name postgres-instance -e POSTGRES_USER=micronaut \
-           -e POSTGRES_PASSWORD=micronaut -e POSTGRES_DB=micronaut \
+           -e POSTGRES_PASSWORD=micronaut -e POSTGRES_DB=airplane \
            -p 5432:5432 postgres:14.1
 ----
 

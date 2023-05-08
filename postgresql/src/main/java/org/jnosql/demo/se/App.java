@@ -23,12 +23,12 @@ public class App {
     public static void main(String[] args) {
 
         try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            Airplane airplane = new Airplane("123", "Effective Java", 2002);
-            Airplane airplane2 = new Airplane("1234", "Effective Java", 2019);
-            Airplane airplane3 = new Airplane("1235", "Effective Java", 2022);
+            Airplane airplane = new Airplane("1", "boeing 777", 1994);
+            Airplane airplane2 = new Airplane("2", "E-175", 2023);
+            Airplane airplane3 = new Airplane("3", "Airbus A319", 1995);
             Airport airport = container.select(Airport.class).get();
             airport.saveAll(List.of(airplane, airplane2, airplane3));
-            List<Airplane> airplanes = airport.findByTitle(airplane.getTitle());
+            List<Airplane> airplanes = airport.findByModel(airplane.getModel());
             System.out.println("The books: " + airplanes);
             System.out.println("The size: " + airplanes.size());
         }

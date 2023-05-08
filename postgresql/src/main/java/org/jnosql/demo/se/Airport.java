@@ -7,5 +7,5 @@ import java.util.List;
 
 @Repository
 public interface Airport extends CrudRepository<Airplane, String> {
-    List<Airplane> findByTitle(String title);
+    List<Airplane> findByModel(String model);
 }

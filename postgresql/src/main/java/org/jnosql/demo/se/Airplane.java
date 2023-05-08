@@ -10,27 +10,27 @@ import java.util.Objects;
 @Entity
 public class Airplane {
     @Id
-    private String isbn;
+    private String id;
     @Column("title")
-    private String title;
+    private String model;
     @Column("year")
     private int year;
 
-    public Airplane(String isbn,
-                    String title,
+    public Airplane(String id,
+                    String model,
                     int year) {
-        this.isbn = isbn;
-        this.title = title;
+        this.id = id;
+        this.model = model;
         this.year = year;
     }
 
 
-    public String getIsbn() {
-        return isbn;
+    public String getId() {
+        return id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getModel() {
+        return model;
     }
 
     public int getYear() {
@@ -46,19 +46,19 @@ public class Airplane {
             return false;
         }
         Airplane airplane = (Airplane) o;
-        return Objects.equals(isbn, airplane.isbn);
+        return Objects.equals(id, airplane.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(isbn);
+        return Objects.hashCode(id);
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "isbn='" + isbn + '\'' +
-                ", title='" + title + '\'' +
+                "isbn='" + id + '\'' +
+                ", title='" + model + '\'' +
                 ", year=" + year +
                 '}';
     }
