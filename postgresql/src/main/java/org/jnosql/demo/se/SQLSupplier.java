@@ -5,6 +5,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Alternative;
 import jakarta.enterprise.inject.Disposes;
 import jakarta.enterprise.inject.Produces;
+import jakarta.inject.Inject;
 import jakarta.interceptor.Interceptor;
 import one.microstream.afs.sql.types.SqlConnector;
 import one.microstream.afs.sql.types.SqlFileSystem;
@@ -15,6 +16,7 @@ import org.eclipse.microprofile.config.Config;
 import org.eclipse.microprofile.config.ConfigProvider;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import javax.sql.DataSource;
 import java.util.function.Supplier;
 
 @Alternative
@@ -22,17 +24,13 @@ import java.util.function.Supplier;
 @ApplicationScoped
 class SQLSupplier implements Supplier<StorageManager> {
 
-    private static final String REDIS_PARAMS = "microstream.redis";
+    @Inject
+    private DataSource dataSource;
 
     @Override
     @Produces
     @ApplicationScoped
     public StorageManager get() {
-        Config config = ConfigProvider.getConfig();
-        PGSimpleDataSource dataSource = new PGSimpleDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/mydb");
-        dataSource.setUser("postgres");
-        dataSource.setPassword("secret");
         SqlFileSystem fileSystem = SqlFileSystem.New(
                 SqlConnector.Caching(
                         SqlProviderPostgres.New(dataSource)
