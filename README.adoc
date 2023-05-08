@@ -30,3 +30,30 @@ docker run --name redis-instance -p 6379:6379 -d redis
 ==== Projects
 
 * link:redis/[Redis sample]
+
+
+
+=== Postgresql
+
+image::https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg[Postgresql, width=200px]
+
+PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance. It was originally named POSTGRES, referring to its origins as a successor to the Ingres database developed at the University of California, Berkeley.
+
+==== How to install with Docker
+
+image::https://d1q6f0aelx0por.cloudfront.net/product-logos/library-docker-logo.png[]
+
+1. Install docker: https://www.docker.com/
+1. https://hub.docker.com/r/couchbase/server/
+1. Run docker command:
+
+[source, bash]
+----
+docker run --rm=true --name postgres-instance -e POSTGRES_USER=micronaut \
+           -e POSTGRES_PASSWORD=micronaut -e POSTGRES_DB=micronaut \
+           -p 5432:5432 postgres:14.1
+----
+
+==== Projects
+
+* link:redis/[Redis sample]
